@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WindowsContextualSearch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        WindowsContextualSearch
+      </div>
+      <div class="help">
+        API: <code id="api-url">http://127.0.0.1:8000</code>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <!-- Left side: Query + Results -->
+      <section class="left">
+        <label for="q" class="big-label">Ask anything</label>
+        <p class="instructions">
+          Type a question about your local documents (PDF, TXT, MD)
+          <br>
+          Q&A: <i>“What is my Facebook email?”</i>
+          <br>
+          File-Search: <i>"Which file contains my bank information?"</i>
+        </p>
+
+        <textarea
+          id="q"
+          placeholder='e.g., "which file contains bixi?"'
+        ></textarea>
+
+        <div class="row">
+          <button id="go" class="btn">Search</button>
+          <button id="clear" class="btn secondary">Clear</button>
+        </div>
+
+        <!-- Results and status are now part of the left side -->
+        <div id="status" class="muted mini"></div>
+        <div id="out" class="results"></div>
+      </section>
+
+      <!-- Right side: Settings -->
+      <aside class="right">
+        <div class="panel side">
+          <h3 class="panel-title">Search Options</h3>
+
+          <div class="toggle-group">
+            <label>Engine</label>
+            <div id="engine-toggles" class="toggles">
+              <button data-val="agent" class="active" title="AI-assisted reasoning for deeper answers">Agent</button>
+              <button data-val="router" title="Fast file-based search (uses keywords)">Router</button>
+            </div>
+            <small class="muted mini">Router = quick lookup <br> Agent = full AI reasoning</small>
+          </div><br>
+
+          <div class="toggle-group">
+            <label>Chunks</label>
+            <div id="chunk-toggles" class="toggles">
+              <button data-val="4">4</button>
+              <button data-val="6" class="active">6</button>
+              <button data-val="8">8</button>
+              <button data-val="10">10</button>
+            </div>
+            <small class="muted mini">Higher = wider context per search</small>
+          </div><br>
+
+          <div class="input-group">
+            <label for="before">Only include files modified before</label>
+            <input id="before" type="date">
+            <small class="muted mini">Leave empty to include all files</small>
+          </div><br>
+
+          <div class="input-group">
+            <label for="root">Select your data folder</label>
+            <input
+              id="root"
+              type="text"
+              placeholder="e.g., C:\\Users\\me\\Desktop\\notes"
+            >
+            <div class="row small-gap">
+              <button id="browse-root" class="btn secondary">Browse...</button>
+              <button id="index-bm25" class="btn secondary">Index BM25</button>
+              <button id="index-chroma" class="btn secondary">Index Chroma</button>
+            </div>
+            <button id="index-both" class="btn full">Index Both</button>
+            <p id="folder-status" class="mini muted">Currently indexed: none</p>
+            <small class="muted mini">Indexing prepares files for faster and smarter searching.</small>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="muted">
+      Made for your local dataset · Hybrid retrieval (Embeddings + BM25) · RRF fusion · Strict citations
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

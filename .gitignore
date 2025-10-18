@@ -1,0 +1,135 @@
+# ==========================
+# General
+# ==========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Virtual environments
+venv/
+env/
+venv_py/
+.venv/
+ENV/
+env.bak/
+.env
+.env.*
+
+# Bytecode cache
+*.pkl
+*.pickle
+
+# Local data / indexes
+index_store/
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================
+# FastAPI / LangChain
+# ==========================
+*.cache/
+*.chroma/
+*.bm25/
+*.embedding/
+chromadb/
+cache/
+uploads/
+data/
+*.pdf
+*.csv
+*.txt
+
+# ==========================
+# C# (WPF / .NET)
+# ==========================
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userprefs
+*.pdb
+*.dbmdl
+*.cache
+*.config
+*.bak
+*.exe
+*.dll
+*.mdb
+*.ipch
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+*.snupkg
+project.lock.json
+
+# Visual Studio
+.vs/
+*.sln.docstates
+*.psess
+*.vsp
+*.vspscc
+
+# ==========================
+# Node / Web UI
+# ==========================
+node_modules/
+dist/
+build/
+.npm/
+.yarn/
+.pnpm-debug.log
+package-lock.json
+yarn.lock
+
+# ==========================
+# Testing / Coverage
+# ==========================
+.pytest_cache/
+coverage/
+.coverage
+.tox/
+htmlcov/
+junit.xml
+reports/
+
+# ==========================
+# IDE / Tooling
+# ==========================
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+
+# ==========================
+# Docker / Deployment
+# ==========================
+*.pid
+*.tar
+*.gz
+*.zip
+*.bak
+*.log
+*.out
+*.pid
+docker-compose.override.yml
