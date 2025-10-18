@@ -1,3 +1,5 @@
+<img src="web_ui/logo.png" width="30%" />
+
 # Windows Contextual Search
 
 Windows Contextual Search is a fully local retrieval and reasoning system built around FastAPI, LangChain, and a local LLM (via Ollama).
