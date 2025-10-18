@@ -133,3 +133,5 @@ reports/
 *.out
 *.pid
 docker-compose.override.yml
+
+*.xlsx
