@@ -52,7 +52,6 @@ uploads/
 data/
 *.pdf
 *.csv
-*.txt
 
 # ==========================
 # C# (WPF / .NET)
