@@ -2,7 +2,7 @@
 
 Windows Contextual Search is a fully local retrieval and reasoning system built around FastAPI, LangChain, and a local LLM (via Ollama).
 It indexes text, PDF, and other supported documents, then allows you to search them contextually through either a web interface or a Windows desktop app.
-The entire pipeline runs offline — no remote API calls or cloud dependencies.
+The entire pipeline runs offline, no remote API calls or cloud dependencies.
 
 ---
 
